@@ -9,6 +9,7 @@ import {
   checkAPICacheTime
 } from 'services/api/cache-system';
 
+
 interface Properties {
   apiData?: any;
   apiMethod: any;
@@ -28,7 +29,7 @@ export const usePageData = ({
   apiData = null,
   disabled = false,
   dataCached = false,
-  expireTime = 600_000 // 10 min
+  expireTime = 600_000 
 }: Properties) => {
   const [data, setData] = useState(null);
   const [pending, setPending] = useState(false);
